@@ -93,7 +93,8 @@ d3.csv(chartdata).then(function(datapoints) {
     const myChart2 = new Chart(ctx2,{
    type:'line',
    data :{
-       labels:[ 'Valtteri Bottas','Lewis Hamilton',  'Sergio Perez','Max Verstappen','Daniel Ricciardo','Esteban Ocon'],
+       labels:[ 'Max Verstappen','Lewis Hamilton',  'Sergio Perez','Valtteri Bottas','Carlos Sainz',
+       'Lando Norris', 'Charles Leclerc','Daniel Ricciardo','Pierre Gasly',  'Fernando Alonso','Esteban Ocon'],
        datasets :[{
            label:'Wins',
            data:Wins,
