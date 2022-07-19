@@ -89,5 +89,53 @@ d3.csv(chartdata).then(function(datapoints) {
    }
            
        }); 
-      
-    });
+       const ctx2= document.getElementById('myChart2').getContext('2d');
+    const myChart2 = new Chart(ctx2,{
+   type:'line',
+   data :{
+       labels:[ 'Valtteri Bottas','Lewis Hamilton',  'Sergio Perez','Max Verstappen','Daniel Ricciardo','Esteban Ocon'],
+       datasets :[{
+           label:'Wins',
+           data:Wins,
+           backgroundColor:'rgba(6, 0, 254, 0.2',
+           borderColor:'rgba(6, 0, 254, 1)',
+           tension:0.4,
+           fill:true
+          
+       }]
+       
+   },
+   options:{
+    scales:{
+        x:{ ticks:{
+                color:'white'
+            
+            }
+
+        },
+        y:{
+            ticks:{
+                color:'white'
+            
+            },
+            beginAtZero:true
+          
+        }
+    },
+    
+       plugins: {
+   title: {
+       display: true,
+       text: 'Total Number of Wins',
+       color:'white'
+   },
+   legend: {
+       display: false
+
+   }
+}
+   }
+
+        });
+       });
+
